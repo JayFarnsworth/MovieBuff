@@ -3,7 +3,7 @@ const idUrl = 'https://omdb-api.now.sh/?i=';
 let selectedMovie = '';
 let selectedObject;
 var currentData = [];
-const postUrl = 'https://sheltered-brushlands-76207.herokuapp.com/';
+const serverUrl = 'https://sheltered-brushlands-76207.herokuapp.com/';
 var actor = ''
 var user = '';
 fetchUsers();
@@ -13,14 +13,14 @@ function refresh(){
   location.reload();
 }
 function fetchUsers(){
-  fetch('http://localhost:3000/users')
+  fetch(serverUrl + 'users/')
     .then(response => {
       return response.json()
     })
     .then(populateUserMenu)
 }
 function refetch(){
-  fetch('http://localhost:3000/users/')
+  fetch(serverUrl + 'users/')
     .then(response => {
       return response.json()
     })
@@ -38,6 +38,7 @@ function submitUser(event) {
   const fromForm = {
     'newUser': formObj.get('new-user')
   };
+  console.log(fromForm);
   postUser(fromForm);
 }
 
@@ -85,7 +86,7 @@ function addFavorite(event){
   postFavorite(sendableObj);
 }
 function postFavorite(formData) {
-  fetch('http://localhost:3000/favorites/', {
+  fetch(serverUrl + 'favorites/', {
     method: 'POST',
     body: JSON.stringify(formData),
     headers: new Headers({'Content-Type': 'application/json'})
@@ -109,7 +110,7 @@ function confirmFavorite(data){
 
 function fetchFaves(event) {
   event.preventDefault();
-  fetch('http://localhost:3000/users/')
+  fetch(serverUrl + 'users/')
     .then(response=>response.json())
     .then(response=>{
       let user = response[0].currentUser;
@@ -181,7 +182,7 @@ function fetchFavoriteDetails(data) {
     var details = await renderFaves(actorDetails, directorDetails, movieDetails);
   }
 
-  request();
+  // request();
 }
 function doStuff(actors, directors, movies){
   console.log(actors);
@@ -190,20 +191,24 @@ function doStuff(actors, directors, movies){
 }
 
 function postUser(formData) {
-  fetch('http://localhost:3000/users/', {
+  fetch(serverUrl + 'users/', {
     method: 'POST',
     body: JSON.stringify(formData),
     headers: new Headers({'Content-Type': 'application/json'})
   })
-  .then(refresh())
+  .then(response=>response.json())
+  .then(response=>console.log('Success:', response))
+  .catch(error=>console.log('Error:', error))
+
+  // .then(refresh())
 }
 function postSelected(formData) {
-  fetch('http://localhost:3000/current/', {
+  fetch(serverUrl + 'current/', {
     method: 'POST',
     body: JSON.stringify(formData),
     headers: new Headers({'Content-Type': 'application/json'})
   })
-  .then(refresh())
+  // .then(refresh())
 }
 function populateUserMenu(data){
   var menu = document.getElementById('user-menu');
@@ -473,58 +478,3 @@ function meterColorSelector(percent) {
   }
   return color;
 }
-//
-//
-// function filterByScore(score, cb) {
-//   return new Promise(function (resolve, reject) {
-//     fetch('https://api.themoviedb.org/3/person/1100/movie_credits?api_key=0d94905d202237598d00f6b083cf5004&language=en-US')
-//     .then(response => response.json())
-//     .then(response => response.cast.map(cast => cast.title))
-//     .then(titles => {
-//       let url = 'https://omdb-api.now.sh/?t=';
-//       let movies = [];
-//       let noData = [];
-//       let promises = [];
-//       for (let title of titles) {
-//         promises.push(Promise.new(function(resolve, reject) {
-//           fetch(url + `${title}`)
-//           .then(response => response.json())
-//           .then(data => {
-//             if (!data.Ratings) {
-//             } else {
-//               if (data.Ratings[1] !== undefined) {
-//                 if (data.Ratings[1].Value.length == 3) {
-//                   let x = data.Ratings[1].Value.slice(0, 2);
-//                   if (x > score) {
-//                     resolve(data);
-//                   } else {
-//                     resolve(null);
-//                   }
-//                 }
-//               } else {
-//                 resolve(null);
-//               }
-//             }
-//           });
-//         }));
-//       }
-//       resolve(Promise.all(promises));
-//     });
-//   });
-// }
-
-// function renderMovies(movies) {
-//   document.getElementsByClassName('results-number')[0].innerHTML = `${movies.length}` + ' Schwarzenegger Film(s) Found For ' + `${movies[0].Year}`;
-//   document.getElementsByClassName('result1')[0].getElementsByClassName('poster')[0].src = movies[0].Poster;
-//   document.getElementsByClassName('result1')[0].getElementsByClassName('result-title')[0].innerHTML = movies[0].Title;
-//   document.getElementsByClassName('result1')[0].getElementsByClassName('result-year')[0].innerHTML = movies[0].Year;
-//   document.getElementsByClassName('result1')[0].getElementsByClassName('result-rating')[0].innerHTML = 'IMDB Score: ' + `${movies[0].imdbRating}`;
-//   document.getElementsByClassName('result2')[0].getElementsByClassName('poster')[0].src = movies[1].Poster;
-//   document.getElementsByClassName('result2')[0].getElementsByClassName('result-title')[0].innerHTML = movies[1].Title;
-//   document.getElementsByClassName('result2')[0].getElementsByClassName('result-year')[0].innerHTML = movies[1].Year;
-//   document.getElementsByClassName('result2')[0].getElementsByClassName('result-rating')[0].innerHTML = 'IMDB Score: ' + `${movies[1].imdbRating}`;
-//   document.getElementsByClassName('result3')[0].getElementsByClassName('poster')[0].src = movies[2].Poster;
-//   document.getElementsByClassName('result3')[0].getElementsByClassName('result-title')[0].innerHTML = movies[2].Title;
-//   document.getElementsByClassName('result3')[0].getElementsByClassName('result-year')[0].innerHTML = movies[2].Year;
-//   document.getElementsByClassName('result3')[0].getElementsByClassName('result-rating')[0].innerHTML = 'IMDB Score: ' + `${movies[2].imdbRating}`;
-// }
