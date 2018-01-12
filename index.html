@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Farnz DB</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <header>
+        <h8>&#0169; 2018 Jay Farnsworth. Absolutely No Rights Reserved.</h8>
+        <image src='titles/filmbuffwhite.png' class='main-title'>
+        <h2>Movie Suggestions For Completionists</h2>
+        <div class='nav-links'>
+          <a href='about.html'><h2>The Site</h2></a>
+          <a><h2>Legal</h2></a>
+          <a><h2>About Me</h2></a>
+        </div>
+        <h2 id='user-header'>Current User: </h2>
+      </header>
+      <main>
+        <nav id='search-bar'>
+          <div class='searchbox'>
+            <div class='searchbox-title'>
+              <image src='Titles/searchactor1.png' class='title-image'>
+            </div>
+            <form class='s-actor'>
+              <input type='text' class='input-main' placeholder='Enter Full Name' name='actor'/>
+              <input type='checkbox' class='check' name='rt-true'>  FILTER BY RT SCORE?<br/>
+              <input type='text' class='input-main' placeholder='Enter minimum %' name='rt-min'/>
+              <button type='submit' class='get-actor'>Get Actor's Films</button>
+            </form>
+          </div>
+          <div class='searchbox' class='s-director'>
+            <div class='searchbox-title'>
+              <image src='Titles/searchdirector1.png' class='title-image'>
+            </div>
+            <form>
+              <input type='text' class='input-main' placeholder='Enter Full Name'/>
+              <input type='checkbox' class='check'>  FILTER BY RT SCORE?<br/>
+              <input type='text' class='input-main' placeholder='Enter minimum %'/>
+              <button type='submit'>Get Director's Films</button>
+            </form>
+          </div>
+          <div class='searchbox' class='s-writer'>
+            <div class='searchbox-title'>
+              <image src='Titles/favorites.png' class='title-image'>
+            </div>
+            <div id='current-user-box'>
+              <h7 id='current-profile'></h7>
+            </div>
+            <form id='submit-fave'>
+              <input name='new-fave' type='text' class='input-main' placeholder='Add Favorite'/>
+              <div id='new-favorite-checks'>
+                <input name='if-actor' type='checkbox'>actor<br/>
+                <input name='if-director' type='checkbox'>director<br/>
+                <input name='if-movie' type='checkbox'>movie<br/>
+                <button type='submit' id='new-fave-button'>Submit</button>
+              </div>
+            </form>
+            <form id='fetch-faves'>
+                <button type='submit'>Fetch User Favorites</button>
+            </form>
+          </div>
+          <div class='searchbox' class='user-operations'>
+            <div class='searchbox-title'>
+              <image src='Titles/profiles.png' class='title-image'>
+            </div>
+            <form class='n-user'>
+              <input type='text' class='input-main' name='new-user' placeholder='New User'/>
+              <button type='submit'>Create</button>
+            </form>
+            <form id='select-profile'>
+              <select name='user-selection' class='input-main' id='user-menu' placeholder='Select Profile'/>
+                <option>Select Existing Profile:</option>
+              </select>
+              <button type='submit'>Login</button>
+            </form>
+          </div>
+        </nav>
+        <div id='loading-bar'>
+          <div id='inner-loading'>Loading...</div>
+        </div>
+        <div class='page-controls'>
+          <h9 class='result-number'></h9>
+          <div class='pages'>
+            <h9 class='page-button-next'>Next</h9>
+            <h9 id='page-number'>Page 1 of 1</h9>
+            <h9 class='page-button-previous'>Previous</h9>
+          </div>
+        </div>
+        <section class='results'>
+          
+          <div class='result'>
+            <div class='poster-left'>
+              <image src='images/placeholder.jpg' class='results-poster'></image>
+            </div>
+            <div class='results-text'>
+              <h2 class='r-title'>Movie Result Number One</h2>
+              <h7 class='r-year'>2018</h7>
+              <h7 class='r-director'>Directed By: Stanley Kubrick</h7>
+              <h7 class='r-stars'>Starring: Rex Sexington, Testy McTest, Lucy Lawless</h7>
+              <h7 class='r-writer'>Written By: Barton Fink</h7>
+              <h7 class='r-awards'>Awards: 2 Oscars and 7 Nominations</h7>
+            </div>
+            <div class='result-reviews'>
+              <div class='review-container'>
+                <h7 class='rt-text'>77%</h7>
+                <image class='review-logo' src='images/RTlogo.png'>
+                <div class='rt-meter'>
+                  <span class='rt-inner'></span>
+                </div>
+              </div>
+              <div class='review-container'>
+                <h7 class='imdb-text'>60%</h7>
+                <image class='review-logo1' src='images/imdblogo.jpeg'>
+                <div class='imdb-meter'>
+                  <span class='imdb-inner'></span>
+                </div>
+              </div>
+              <div class='review-container'>
+                <h7 class='meta-text'>70%</h7>
+                <image class='review-logo1' src='images/metacriticlogo.jpg'>
+                <div class='metacritic-meter'>
+                  <span class='meta-inner'></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='favorites-results'>
+            <image src='Titles/myfavorites1.png' class='favorite-main'>
+            <h1 class='user-favorite-title'></h1>
+            <div class='favorite-section'>
+              <image src='Titles/actors.png' class='favorite-title'>
+              <div class='actors-populate'>
+                <div class='user-actors-section'>
+                  <image src='images/placeholder.jpg' class='actor-faves'></image>
+                  <div class='actor-fave-text'>
+                    <h2 class='actor-fave-name'>Actor Name</h2>
+                    <h7 class='actor-fave-knownfor'>Known For:</h7>
+                    <div class='known-for-posters'>
+                      <image class='known-for-poster' src='images/placeholder.jpg'>
+                      <image class='known-for-poster' src='images/placeholder.jpg'>
+                      <image class='known-for-poster' src='images/placeholder.jpg'>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h7 id='user-actors'></h7>
+            </div>
+            <div class='favorite-section'>
+              <image src='Titles/directors.png' class='favorite-title'>
+              <div class='directors-populate'>
+
+              </div>
+              <h7 id='user-directors'></h7><br />
+            </div>
+            <div class='favorite-section'>
+              <image src='Titles/movies.png' class='favorite-title'>
+              <h7 id='user-movies'></h7>
+              <div class='movies-populate'>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+          <script src='scripts/app.js'></script>
+          <script src='data/data.js'></script>
+    </body>
+</html>

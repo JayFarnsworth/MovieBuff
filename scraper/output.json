@@ -1,0 +1,141 @@
+[
+    {
+        "title": "Isle of Dogs",
+        "year": "2018",
+        "rating": "",
+        "credits": [
+            "Producer",
+            "Screenwriter",
+            "Director"
+        ]
+    },
+    {
+        "title": "Hitchcock/Truffaut",
+        "year": "2015",
+        "rating": "96%",
+        "credits": [
+            "Actor"
+        ]
+    },
+    {
+        "title": "She's Funny That Way",
+        "year": "2015",
+        "rating": "40%",
+        "credits": [
+            "Producer"
+        ]
+    },
+    {
+        "title": "The Grand Budapest Hotel",
+        "year": "2014",
+        "rating": "92%",
+        "credits": [
+            "Director",
+            "Producer",
+            "Screenwriter"
+        ]
+    },
+    {
+        "title": "Trespassing Bergman",
+        "year": "2013",
+        "rating": "",
+        "credits": [
+            "Actor"
+        ]
+    },
+    {
+        "title": "Moonrise Kingdom",
+        "year": "2012",
+        "rating": "93%",
+        "credits": [
+            "Producer",
+            "Director",
+            "Screenwriter"
+        ]
+    },
+    {
+        "title": "Fantastic Mr. Fox",
+        "year": "2009",
+        "rating": "93%",
+        "credits": [
+            "",
+            "Screenwriter",
+            "Director"
+        ]
+    },
+    {
+        "title": "Hotel Chevalier",
+        "year": "2007",
+        "rating": "",
+        "credits": [
+            "Screenwriter",
+            "Producer",
+            "Director"
+        ]
+    },
+    {
+        "title": "The Darjeeling Limited",
+        "year": "2007",
+        "rating": "69%",
+        "credits": [
+            "Producer",
+            "Screenwriter",
+            "Director"
+        ]
+    },
+    {
+        "title": "The Squid and the Whale",
+        "year": "2005",
+        "rating": "92%",
+        "credits": [
+            "Producer"
+        ]
+    },
+    {
+        "title": "The Life Aquatic with Steve Zissou",
+        "year": "2004",
+        "rating": "56%",
+        "credits": [
+            "Producer",
+            "Screenwriter",
+            "Director"
+        ]
+    },
+    {
+        "title": "The Royal Tenenbaums",
+        "year": "2002",
+        "rating": "80%",
+        "credits": [
+            "Producer",
+            "Director",
+            "Screenwriter"
+        ]
+    },
+    {
+        "title": "Rushmore",
+        "year": "1998",
+        "rating": "89%",
+        "credits": [
+            "Director",
+            "Screenwriter",
+            "Executive Producer"
+        ]
+    },
+    {
+        "title": "Bottle Rocket",
+        "year": "1996",
+        "rating": "85%",
+        "credits": [
+            "Director",
+            "Screenwriter"
+        ]
+    },
+    {
+        "title": "Bottle Rocket",
+        "year": "1994",
+        "rating": "",
+        "credits": [
+            "Director"
+        ]
+    }
+]

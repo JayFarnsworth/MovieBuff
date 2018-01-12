@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Farnz DB</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <header>
+        <h8>&#0169; 2018 Jay Farnsworth. Absolutely No Rights Reserved.</h8>
+        <image src='titles/filmbuffwhite.png' class='main-title'>
+        <h2>Movie Suggestions For Completionists</h2>
+      </header>
+      <main>
+        <nav id='search-bar'>
+          <div class='searchbox'>
+            <div class='searchbox-title'>
+              <image src='Titles/searchactor1.png' class='title-image'>
+            </div>
+            <form class='s-actor'>
+              <input type='text' class='input-main' placeholder='Enter Full Name' name='actor'/>
+              <input type='checkbox' class='check' name='rt-true'>  FILTER BY RT SCORE?<br/>
+              <input type='text' class='input-main' placeholder='Enter minimum %' name='rt-min'/>
+              <button type='submit' class='get-actor'>Get Actor's Films</button>
+            </form>
+          </div>
+          <div class='searchbox' class='s-director'>
+            <div class='searchbox-title'>
+              <image src='Titles/searchdirector1.png' class='title-image'>
+            </div>
+            <form>
+              <input type='text' class='input-main' placeholder='Enter Full Name'/>
+              <input type='checkbox' class='check'>  FILTER BY RT SCORE?<br/>
+              <input type='text' class='input-main' placeholder='Enter minimum %'/>
+              <button type='submit'>Get Director's Films</button>
+            </form>
+          </div>
+          <div class='searchbox' class='s-writer'>
+            <div class='searchbox-title'>
+              <image src='Titles/favorites.png' class='title-image'>
+            </div>
+            <div id='current-user-box'>
+              <h7 id='user-before'>Current User: </h7>
+              <h7 id='current-profile'></h7>
+            </div>
+            <form id='submit-fave'>
+              <input name='new-fave' type='text' class='input-main' placeholder='Add Favorite'/>
+              <div id='new-favorite-checks'>
+                <input name='if-actor' type='checkbox'>actor<br/>
+                <input name='if-director' type='checkbox'>director<br/>
+                <input name='if-movie' type='checkbox'>movie<br/>
+                <button type='submit' id='new-fave-button'>Submit</button>
+              </div>
+            </form>
+            <form id='fetch-faves'>
+                <button type='submit'>Fetch User Favorites</button>
+            </form>
+          </div>
+          <div class='searchbox' class='user-operations'>
+            <div class='searchbox-title'>
+              <image src='Titles/profiles.png' class='title-image'>
+            </div>
+            <form class='n-user'>
+              <input type='text' class='input-main' name='new-user' placeholder='New User'/>
+              <button type='submit'>Create</button>
+            </form>
+            <form id='select-profile'>
+              <select name='user-selection' class='input-main' id='user-menu' placeholder='Select Profile'/>
+                <option>Select Existing Profile:</option>
+              </select>
+              <button type='submit'>Login</button>
+            </form>
+          </div>
+        </nav>
+        <section class='about'>
+          <h2>Film Buff</h2><br />
+          <p>
+            This is a project completed for my Galvanize P2. The requirements were to make a web app that renders API data. It was far, far to ambitious for the project, and as such I have to move on before it is complete. It will continuously be added to and altered as my time allows moving forward. <br /><br /><br />
+            What works:<br />
+            Actor and Director Search will accurately render results, and can filter based on the Rotten Tomatoes minimum score, if given. Results are displayed in order of film popularity as determined by TMDB. <br /><br />
+            Profile actions work. You can create a profile, and add favorites to it. The fetch favorites button will grab the plain text from your profile.<br /><br /><br />
+            What's coming:<br />
+            I'm planning on introducing a much more robust set of results filters and sorts. This includes filtering by any of my three given review scores. Results will be able to be sorted by year, score, box office, etc.<br /><br />
+            I'm also planning on adding a filmography visualization feature that will graph an actor or director's films based on a number of different changeable criteria. The idea is to be able to chart a filmography based on year and quality. <br /><br />
+            Most importantly, I will be creating a more robust set of profile features. Upon adding a favorite, an API search query will be made, which will confirm the actual movie, actor, or director queried. The data retreived from the search will be added to your profile on Filmbuff's server. This will allow for a fetch of your user favorites to retreive full sets of data from each item instead of the simple text that was initially inputted. Links will be added to each movie, actor, and director to fetch their data with a click. Upon loading up a favorite director or actor in your profile, each film will have a "seen" button or a "favorite". This way you can track which movies from a director's filmography you haven't seen, and ideally will quickly match you with the high quality films from the artist you have not seen. <br /><br />
+            Finally I'm going to build out an algoritm that can reccomend movies to you based on your favorites. There are a number of ways that I can go about doing this. I'm going to place the most emphasis on the intersection of your favorite people and quality films.
+          </p>
+        </section>
+
+      </main>
+          <script src='scripts/app.js'></script>
+          <script src='data/data.js'></script>
+    </body>
+</html>
