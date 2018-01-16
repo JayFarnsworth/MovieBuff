@@ -331,7 +331,7 @@ function getMovieDetails(movies, a, b){
     var fullDetails = [];
     for (var i = 0; i < movies.length; i++) {
       let title = movies[i].title;
-      var response = await fetch('http://www.omdbapi.com/?t=' + `${title}` + '&plot=full&apikey=7594119a');
+      var response = await fetch('https://www.omdbapi.com/?t=' + `${title}` + '&plot=full&apikey=7594119a');
       var json = await response.json();
       fullDetails.push(json);
     }

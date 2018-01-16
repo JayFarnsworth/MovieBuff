@@ -6,8 +6,8 @@ var app     = express();
 
 
 app.get('/scrape/', function(req, res){
-console.log(req.query.name);
-url = 'https://www.rottentomatoes.com/celebrity/' + req.query.name;
+
+url = 'https://www.rottentomatoes.com/celebrity/stanley_kubrick/';
 
 request(url, function(error, response, html){
     if(!error){
@@ -63,8 +63,6 @@ request(url, function(error, response, html){
       json[i].credits = creditsTogether[i];
     }
 }
-
-response.json;
 
 fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
 

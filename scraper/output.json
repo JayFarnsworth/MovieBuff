@@ -1,42 +1,6 @@
 [
     {
-        "title": "Isle of Dogs",
-        "year": "2018",
-        "rating": "",
-        "credits": [
-            "Producer",
-            "Screenwriter",
-            "Director"
-        ]
-    },
-    {
-        "title": "Hitchcock/Truffaut",
-        "year": "2015",
-        "rating": "96%",
-        "credits": [
-            "Actor"
-        ]
-    },
-    {
-        "title": "She's Funny That Way",
-        "year": "2015",
-        "rating": "40%",
-        "credits": [
-            "Producer"
-        ]
-    },
-    {
-        "title": "The Grand Budapest Hotel",
-        "year": "2014",
-        "rating": "92%",
-        "credits": [
-            "Director",
-            "Producer",
-            "Screenwriter"
-        ]
-    },
-    {
-        "title": "Trespassing Bergman",
+        "title": "Un Voyageur",
         "year": "2013",
         "rating": "",
         "credits": [
@@ -44,57 +8,43 @@
         ]
     },
     {
-        "title": "Moonrise Kingdom",
-        "year": "2012",
-        "rating": "93%",
+        "title": "What Is Out There?",
+        "year": "2011",
+        "rating": "",
         "credits": [
-            "Producer",
-            "Director",
+            "Actor"
+        ]
+    },
+    {
+        "title": "Dark Side of the Moon",
+        "year": "2002",
+        "rating": "",
+        "credits": [
+            "Actor"
+        ]
+    },
+    {
+        "title": "Eyes Wide Shut",
+        "year": "1999",
+        "rating": "74%",
+        "credits": [
             "Screenwriter"
         ]
     },
     {
-        "title": "Fantastic Mr. Fox",
-        "year": "2009",
+        "title": "Full Metal Jacket",
+        "year": "1987",
         "rating": "93%",
         "credits": [
-            "",
+            "Director",
             "Screenwriter",
-            "Director"
-        ]
-    },
-    {
-        "title": "Hotel Chevalier",
-        "year": "2007",
-        "rating": "",
-        "credits": [
-            "Screenwriter",
-            "Producer",
-            "Director"
-        ]
-    },
-    {
-        "title": "The Darjeeling Limited",
-        "year": "2007",
-        "rating": "69%",
-        "credits": [
-            "Producer",
-            "Screenwriter",
-            "Director"
-        ]
-    },
-    {
-        "title": "The Squid and the Whale",
-        "year": "2005",
-        "rating": "92%",
-        "credits": [
             "Producer"
         ]
     },
     {
-        "title": "The Life Aquatic with Steve Zissou",
-        "year": "2004",
-        "rating": "56%",
+        "title": "The Shining",
+        "year": "1980",
+        "rating": "87%",
         "credits": [
             "Producer",
             "Screenwriter",
@@ -102,9 +52,99 @@
         ]
     },
     {
-        "title": "The Royal Tenenbaums",
-        "year": "2002",
-        "rating": "80%",
+        "title": "Barry Lyndon",
+        "year": "1975",
+        "rating": "97%",
+        "credits": [
+            "Screenwriter"
+        ]
+    },
+    {
+        "title": "A Clockwork Orange",
+        "year": "1971",
+        "rating": "91%",
+        "credits": [
+            "Screenwriter",
+            "Director",
+            "Producer"
+        ]
+    },
+    {
+        "title": "2001: A Space Odyssey",
+        "year": "1968",
+        "rating": "94%",
+        "credits": [
+            "Screenwriter",
+            "Director",
+            "Producer"
+        ]
+    },
+    {
+        "title": "Dr. Strangelove Or How I Learned to Stop Worrying and Love the Bomb",
+        "year": "1964",
+        "rating": "99%",
+        "credits": [
+            "Director",
+            "Producer",
+            "Screenwriter"
+        ]
+    },
+    {
+        "title": "Lolita",
+        "year": "1962",
+        "rating": "95%",
+        "credits": [
+            "Director"
+        ]
+    },
+    {
+        "title": "Spartacus",
+        "year": "1960",
+        "rating": "96%",
+        "credits": [
+            "Director"
+        ]
+    },
+    {
+        "title": "Paths of Glory",
+        "year": "1957",
+        "rating": "94%",
+        "credits": [
+            "Screenwriter",
+            "Director"
+        ]
+    },
+    {
+        "title": "The Killing",
+        "year": "1956",
+        "rating": "97%",
+        "credits": [
+            "Screenwriter",
+            "Director"
+        ]
+    },
+    {
+        "title": "Killer's Kiss",
+        "year": "1955",
+        "rating": "84%",
+        "credits": [
+            "Director",
+            "Screenwriter",
+            "Producer"
+        ]
+    },
+    {
+        "title": "The Seafarers",
+        "year": "1953",
+        "rating": "",
+        "credits": [
+            "Director"
+        ]
+    },
+    {
+        "title": "Fear and Desire",
+        "year": "1953",
+        "rating": "83%",
         "credits": [
             "Producer",
             "Director",
@@ -112,27 +152,17 @@
         ]
     },
     {
-        "title": "Rushmore",
-        "year": "1998",
-        "rating": "89%",
+        "title": "Day of the Fight",
+        "year": "1951",
+        "rating": "",
         "credits": [
-            "Director",
-            "Screenwriter",
-            "Executive Producer"
+            "Producer",
+            "Director"
         ]
     },
     {
-        "title": "Bottle Rocket",
-        "year": "1996",
-        "rating": "85%",
-        "credits": [
-            "Director",
-            "Screenwriter"
-        ]
-    },
-    {
-        "title": "Bottle Rocket",
-        "year": "1994",
+        "title": "Flying Padre",
+        "year": "1951",
         "rating": "",
         "credits": [
             "Director"
